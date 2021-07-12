@@ -1,0 +1,121 @@
+.delivery {
+  .offset(0 0 35px 0; 0);
+}
+
+.delivery__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px 20px;
+  align-items: stretch;
+  .offset(0; 0 0 30px 0);
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 318px));
+  }
+}
+
+.delivery__item {
+  .offset(22px 27px 22px 20px; 0);
+  background-color: @white;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    .offset(102px 37px 42px 40px; 0);
+  }
+}
+
+.delivery__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 151px;
+}
+
+.delivery__item-title {
+  .offset(0; 0 0 19px 0);
+  font-family: "APCGaramondC", "Times New Roman", serif;
+  font-weight: 700;
+  .typography(22px; 29px);
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 78px;
+    padding: 0 30px;
+    .typography(32px; 39px);
+  }
+}
+
+.delivery__phone-link {
+  font-weight: 700;
+  .typography(18px; 25px);
+  color: @darkbrown;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .typography(24px; 29px);
+  }
+}
+
+.delivery__item-text {
+  .offset(0; 0);
+  .typography(14px; 26px);
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .typography(16px; 28px);
+  }
+}
+
+.delivery__promo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  .offset(59px 56px 28px 59px; 0 auto);
+  background-image: url("../img/delivery-promo.svg");
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    padding: 59px 76px 48px 79px;
+  }
+}
+
+.delivery__promo-title {
+  .offset(0; 0);
+  font-family: "APCGaramondC", "Times New Roman", serif;
+  font-weight: 700;
+  .typography(22px; 29px);
+  letter-spacing: 0.01em;
+  color: @brown;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .typography(32px; 39px);
+  }
+}
+
+.delivery__price {
+  font-weight: 700;
+  .typography(25px; 33px);
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .typography(35px; 43px);
+  }
+}
+
+.delivery__promo-text {
+  .offset(0; 0);
+  .typography(14px; 26px);
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .typography(16px; 28px);
+  }
+}
+
+.delivery__promo-text--first {
+  margin-bottom: 7px;
+}

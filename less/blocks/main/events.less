@@ -1,3 +1,11 @@
+.events {
+  .offset(42px 0 40px 0; 0);
+
+  @media (min-width: @desktop-width) {
+    .offset(82px 0 120px 0; 0);
+  }
+}
+
 .events__description {
   .offset(0; 0 0 26px 0);
 
@@ -53,6 +61,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 413px 413px 413px;
     gap: 40px 51px;
+    margin-bottom: 50px;
   }
 }
 

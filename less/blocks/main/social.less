@@ -1,7 +1,35 @@
+.social {
+  .offset(24px 0 64px 0 ; 0);
+
+  @media (min-width: @desktop-width) {
+    .offset(84px 0 248px 0 ; 0);
+  }
+}
+
+.social__network {
+  padding-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 214px;
+  }
+}
+
+.social__img-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px 20px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 318px));
+    gap: 30px 30px;
+  }
+}
+
 .social__img {
-  width: 300px;
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    width: 434px;
+    width: 318px;
   }
 }
