@@ -1,0 +1,114 @@
+.reviews__card {
+  position: relative;
+  .offset(20px 32px 28px 40px; 0 11px);
+  background-color: @white;
+  border-radius: 3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 21px 0 21px;
+
+    &::before {
+      top: -20px;
+      left: -20px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 52px 48px 80px;
+  }
+}
+
+.reviews__inner {
+  display: flex;
+  flex-direction: column;
+  width: 206px;
+
+  @media (min-width: @tablet-width) {
+    width: 414px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 282px;
+  }
+}
+
+.reviews__card-generate(@n) when (@n > 0) {
+  .reviews__card--@{n} {
+    &::before {
+      background-image: url("../img/mobile-img/reviews-img-@{n}.png");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/mobile-img/reviews-img-@{n}.png");
+      }
+    }
+  }
+  .reviews__card-generate(@n - 1);
+}
+
+.reviews__card-generate(3);
+
+.reviews__title_container {
+  min-height: 29px;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 39px;
+  }
+}
+
+.reviews__title {
+  .offset(0; 0);
+  font-family: "APCGaramondC", "Times New Roman", serif;
+  font-weight: 700;
+  .typography(22px; 29px);
+  letter-spacing: 0.01em;
+  color: @brown;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .typography(32px; 39px);
+  }
+}
+
+.reviews__text-container {
+  min-height: 176px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 220px;
+    margin-bottom: 40px;
+  }
+}
+
+.reviews__text {
+  .offset(0; 0);
+  .typography(14px; 22px);
+
+  @media (min-width: @tablet-width) {
+    .typography(16px; 28px);
+  }
+}
+
+.reviews__link {
+  display: inline-block;
+  margin-top: auto;
+  .typography(14px; 18px);
+  letter-spacing: 0.02em;
+  color: @orange;
+
+  @media (min-width: @tablet-width) {
+    .typography(18px; 22px);
+  }
+}

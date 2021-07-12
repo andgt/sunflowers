@@ -6,12 +6,14 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    padding: 100px 0 95px 0;
+    padding: 100px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
+    height: 100vh;
+    min-height: 885px;
     background-size: 1920px 998px;
-    background-position: cover;
+    background-position: 0 -98px;
     background-image: url("../img/desktop-img/promo-bg.png");
   }
 }
