@@ -1,0 +1,109 @@
+.advantages__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 440px;
+  .offset(0; 0 auto);
+  list-style: none;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -110px;
+    width: 150%;
+    height: 110%;
+    background-color: @white2;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px 20px;
+    max-width: 100%;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 666px;
+    margin: 0;
+  }
+}
+
+.advantages__list--events {
+  &::before {
+    display: none;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 210px;
+  min-height: 40px;
+  .offset(0 0 0 55px; 0 0 20px 0);
+  .typography(14px; 18px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    max-width: 100%;
+    min-height: 80px;
+    padding-left: 95px;
+    margin: 0;
+    .typography(16px; 22px);
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &::before {
+      top: -20px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 50px;
+  }
+}
+
+.advantages__item--events {
+  align-items: flex-start;
+}
+
+.advantages__item-generate(@n) when (@n > 0) {
+  .advantages__item--@{n} {
+    &::before {
+      background-image: url("../img/mobile-img/advantages-item-@{n}.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/tablet-img/advantages-item-@{n}.svg");
+      }
+    }
+  }
+  .advantages__item-generate(@n - 1);
+}
+
+.advantages__item-generate(4);
