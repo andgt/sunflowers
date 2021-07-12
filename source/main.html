@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Ресторан Подсолнухи</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/icon/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=52603105-8ba9-4825-80d1-3cf5431847c9&width=100%&lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="container header__wrapper">
+        <div class="logo">
+          <img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" width="272" height="79" alt="Логотип">
+          <p class="logo__promo">Ресторан Европейской кухни</p>
+        </div>
+        <nav class="main-nav main-nav--closed">
+          <button class="button main-nav__button-toggle">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="about.html" target="_blank" rel="nofollow">Меню</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html" target="_blank" rel="nofollow">Бронирование</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Банкеты</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="services.html" target="_blank" rel="nofollow">Доставка</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="delivery.html" target="_blank" rel="nofollow">Новости и мероприятия</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="contacts.html" target="_blank" rel="nofollow">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__address-wrapper">
+          <address class="contacts__address contacts__address--header">пгт Партенит, ул. Партенитская 1</address>
+          <a class="header__link-contacts" href="#">Смотреть на карте</a>
+        </div>
+        <div class="contacts-main">
+          <div class="contacts-main__messenger">
+            <a class="contacts-main__link" href="viber://chat?number=79786220179" target="_blank" rel="nofollow">
+              <img class="contacts-main__icon" src="img/icon/icon-viber.svg" width="24" height="24" alt="Логотип Viber">
+            </a>
+            <a class="contacts-main__link contacts-main__link--whatsapp" href="https://api.whatsapp.com/send?phone=79786220179" target="_blank" rel="nofollow">
+              <img class="contacts-main__icon" src="img/icon/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+            </a>
+          </div>
+          <div class="contacts-main__phone">
+            <a class="contacts-main__phone-link" href="tel:+79786220179" rel="nofollow">+7 978 622 01 79</a>
+            <p class="contacts-main__schedule">без выходных: 8-30 до 23-00</p>
+          </div>
+          <a class="contacts-main__back-call" href="#">Заказать звонок</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="promo">
+        <div class="container">
+          <h1 class="visually-hidden">Ресторан европейской кухни с доставкой еды на дом</h1>
+          <div class="promo__inner">
+            <div class="promo__description">
+              <h2 class="promo__subtitle">
+                <span class="promo__subtitle-text promo__subtitle-text--first">Насладитесь вкусом</span>
+                <span class="promo__subtitle-text promo__subtitle-text--second">европейской кухни</span>
+              </h2>
+              <p class="promo__text">из свежих крымских продуктов на берегу Черного моря</p>
+            </div>
+            <div class="promo__link">
+              <a class="button button--promo button--menu" href="#">смотреть меню</a>
+              <a class="button button--promo button--link" href="#">заказать столик</a>
+            </div>
+          </div>
+          <div class="advantages">
+            <ul class="advantages__list">
+              <li class="advantages__item advantages__item--1">Вместительный зал на 48 гостей</li>
+              <li class="advantages__item advantages__item--2">Каждый вечер живая музыка</li>
+              <li class="advantages__item advantages__item--3">Просторная летняя терраса</li>
+              <li class="advantages__item advantages__item--4">Есть доставка продукции</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="menu">
+        <div class="container">
+          <h2 class="main__subtitle">Меню ресторана «Подсолнухи»</h2>
+          <div class="tab">
+            <button class="button tab__button tab__button--active" type="button">Салаты</button>
+            <button class="button tab__button" type="button">Закуски</button>
+            <button class="button tab__button" type="button">Гарниры</button>
+            <button class="button tab__button" type="button">Рыба</button>
+            <button class="button tab__button" type="button">Cупы</button>
+            <button class="button tab__button" type="button">Мясо</button>
+            <button class="button tab__button" type="button">Паста</button>
+            <button class="button tab__button" type="button">Десерты</button>
+          </div>
+          <div class="slick-slider">
+            <div class="slick-slider__1">
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-1.jpg" srcset="img/menu-img-1@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-2.jpg" srcset="img/menu-img-2@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-3.jpg" srcset="img/menu-img-3@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-4.jpg" srcset="img/menu-img-4@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-1.jpg" srcset="img/menu-img-1@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-2.jpg" srcset="img/menu-img-2@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-3.jpg" srcset="img/menu-img-3@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="slider__card">
+                <article class="menu__card">
+                  <a class="menu__img-link" href="#">
+                    <img class="menu__img" src="img/menu-img-4.jpg" srcset="img/menu-img-4@2x 2x" width="318" height="270" alt="Изображение позиции меню">
+                  </a>
+                  <div class="menu__features">
+                    <h3 class="menu__title">
+                      <a class="menu__title-link" href="#">Зеленый салат с авокадо и свежим огурцом</a>
+                    </h3>
+                    <div class="menu__info">
+                      <span class="menu__price">350</span>
+                      <span class="menu__weight">250 г</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <h2 class="main__subtitle">Скачайте полное меню ресторана «Подсолнухи»</h2>
+          <ul class="menu__advantages-list">
+            <li class="menu__advantages-item">
+              <div class="menu__advantages-card">
+                <div class="menu__advantages-inner">
+                  <img class="menu__advantages-img" src="img/menu-advantages-1.png" width="158" height="163" alt="Разделы меню">
+                </div>
+                <h3 class="menu__advantages-title">Актуальные цены</h3>
+              </div>
+            </li>
+            <li class="menu__advantages-item">
+              <div class="menu__advantages-card">
+                <div class="menu__advantages-inner">
+                  <img class="menu__advantages-img" src="img/menu-advantages-2.png" width="158" height="163" alt="Разделы меню">
+                </div>
+                <h3 class="menu__advantages-title">Винная карта</h3>
+              </div>
+            </li>
+            <li class="menu__advantages-item">
+              <div class="menu__advantages-card">
+                <div class="menu__advantages-inner">
+                  <img class="menu__advantages-img" src="img/menu-advantages-3.png" width="158" height="163" alt="Разделы меню">
+                </div>
+                <h3 class="menu__advantages-title">Сезонное меню</h3>
+              </div>
+            </li>
+            <li class="menu__advantages-item">
+              <div class="menu__advantages-card">
+                <div class="menu__advantages-inner">
+                  <img class="menu__advantages-img" src="img/menu-advantages-4.png" width="158" height="163" alt="Разделы меню">
+                </div>
+                <h3 class="menu__advantages-title">Завтраки</h3>
+              </div>
+            </li>
+          </ul>
+          <a class="button button--link button--link-menu" href="#">скачать меню</a>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="container">
+          <h2 class="main__subtitle main__subtitle--gallery">Фотогалерея</h2>
+          <p class="main__promo">Ждем вас в гости!</p>
+          <div class="tab tab--gallery">
+            <button class="button tab__button tab__button--active" type="button">Интерьер</button>
+            <button class="button tab__button tab__button--gallery" type="button">История</button>
+            <button class="button tab__button tab__button--gallery" type="button">Кухня</button>
+            <button class="button tab__button tab__button--gallery" type="button">Команда</button>
+            <button class="button tab__button tab__button--gallery" type="button">Меню</button>
+          </div>
+          <div class="slick-slider">
+            <div class="slick-slider__2">
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-1.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-2.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-3.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-4.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-5.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-1.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-2.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-3.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-4.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+              <div class="slider__card slider__card--gallery">
+                <img class="gallery__img" src="img/gallery-5.png" width="318" height="220" alt="Фотогалерея">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="order">
+        <div class="container">
+          <h2 class="main__subtitle">Хотите попробовать европейские деликатесы и насладиться атмосферой побережья Черного моря?</h2>
+          <p class="main__promo">Ресторан «Подсолнухи» идеально подойдет для этого!</p>
+          <form class="form" action="#" method="POST">
+            <h2 class="form__title">Забронируй столик в нашем ресторане прямо сейчас</h2>
+            <div class="form__contacts-data">
+              <div class="form__inner">
+                <label class="visually-hidden" for="name-back-call">Ваше имя</label>
+                <input class="form__input form__input--username" type="text" name="username" id="name-back-call" placeholder="Ваше имя" required>
+              </div>
+              <div class="form__inner">
+                <label class="visually-hidden" for="phone-number-calculate">Номер телефона</label>
+                <input class="form__input form__input--phone" type="tel" name="phonecalculate" id="phone-number-calculate" placeholder="+7 (___) ___ - __ - __" pattern="(\+?\d[- .]*){7,13}" required>
+              </div>
+            </div>
+            <div class="form__order-data">
+              <select>
+                <option>Кол-во человек</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+              <input type="date" name="date">
+              <input type="time" name="time">
+            </div>
+            <a class="button button--link button--link-form" href="#">забронировать</a>
+          </form>
+        </div>
+      </section>
+      <section class="events">
+        <div class="container">
+          <div class="events__description">
+            <div class="events__inner">
+              <h2 class="main__subtitle main__subtitle--events">Дни рождения, банкеты и любые застолья</h2>
+              <p class="main__promo">Организуем «под ключ»</p>
+              <p class="events__text">Мы с удовольствием поможем организовать банкет по любому поводу. О доступном оборудовании и дополнительных услугах расскажем по телефону, звоните</p>
+              <a class="button button--link button--link-events" href="#">заказать праздник</a>
+            </div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/tablet-img/events-img.jpg 1x, img/tablet-img/events-img@2x.jpg  2x">
+              <img class="events__img" src="img/mobile-img/events-img.jpg" srcset="img/mobile-img/events-img@2x.jpg 2x" width="300" height="280" alt="Фото банкета">
+            </picture>
+          </div>
+          <ul class="events__list">
+            <li class="events__item events__item--1">
+              <h3 class="events__item-title">Дни рождения</h3>
+              <p class="events__item-text">Украсим ресторан шарами и гирляндами, пригласим ведущих, приготовим <strong>праздничное меню</strong> для маленьких гостей.</p>
+            </li>
+            <li class="events__item events__item--2">
+              <h3 class="events__item-title">Свадьбы</h3>
+              <p class="events__item-text">Ресторан <strong>вмещает до 48 гостей.</strong> На террасе получаются великолепные выездные регистрации и летние вечеринки.</p>
+            </li>
+            <li class="events__item events__item--3">
+              <h3 class="events__item-title">Банкеты</h3>
+              <p class="events__item-text">Не обязательно арендовывать весь ресторан! У нас есть две отдельные зоны для <strong>компаний 16-24 человека.</strong></p>
+            </li>
+          </ul>
+          <div class="advantages">
+            <ul class="advantages__list advantages__list--events">
+              <li class="advantages__item advantages__item--events">Полный комплект звукового оборудования</li>
+              <li class="advantages__item advantages__item--events">Можем пригласить ведущего</li>
+              <li class="advantages__item advantages__item--events">Просторная летняя площадка</li>
+              <li class="advantages__item advantages__item--events">Индивидуальное меню для каждого мероприятия</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="delivery">
+        <h2 class="main__subtitle">Ищете где заказать доставку еды на дом или офис в Партените?</h2>
+        <p class="main__promo">Мы можем предложить доставку еды из ресторана по пгт. Партенит.</p>
+        <ul class="delivery__list">
+          <li class="delivery__item">
+            <h3 class="delivery__item-title">Телефоны доставки</h3>
+            <a class="contacts__phone-link contacts__phone-link--delivery" href="tel:+79786220179">+7 978 622 01 79</a>
+          </li>
+          <li class="delivery__item">
+            <h3 class="delivery__item-title">Дни работы доставки</h3>
+            <p class="delivery__item-text" href="tel:+79786220179">Заказы по телефону и онлайн принимаются с 10 до 21</p>
+          </li>
+          <li class="delivery__item">
+            <h3 class="delivery__item-title">Меры безопасности</h3>
+            <p class="delivery__item-text" href="tel:+79786220179">Мы соблюдаем все меры предосторожности: постоянная дезинфекция на кухне и замер температуры у сотрудников</p>
+          </li>
+          <li class="delivery__item">
+            <h3 class="delivery__item-title">Оплата заказа</h3>
+            <p class="delivery__item-text" href="tel:+79786220179">При самовывозе доступна оплата наличными или по карте, при доставке - только наличными</p>
+          </li>
+        </ul>
+        <div class="delivery__promo">
+          <h3 class="delivery__promo-title">Бесплатная доставка</h3>
+          <p class="delivery__promo-text">при заказе от <span class="delivery__price">2 500 ₽</span></p>
+          <p class="delivery__promo-text">На дом или в офис по пгт. Партенит</p>
+        </div>
+      </section>
+      <section class="social">
+        <div class="social__network">
+          <h2 class="main__subtitle">Instagram</h2>
+          <p class="main__promo">Наши фотоистории в социальных сетях</p>
+          <div class="slider slider--social-img">
+            <div class="slider__track">
+              <img src="" width="318" height="340" alt="Фото из Инстаграма">
+              <img src="" width="318" height="340" alt="Фото из Инстаграма">
+              <img src="" width="318" height="340" alt="Фото из Инстаграма">
+              <img src="" width="318" height="340" alt="Фото из Инстаграма">
+            </div>
+            <div class="slider__controls">
+              <button class="slider__button slider__button--left" type="button"></button>
+              <button class="slider__button slider__button--right" type="button"></button>
+            </div>
+          </div>
+        </div>
+        <div class="social__reviews">
+          <h2 class="main__subtitle">Отзывы наших гостей</h2>
+          <div class="slider slider--social-reviews">
+            <div class="slider__track">
+              <img class="social__img" src="" width="434" height="445" alt="Фото из Инстаграма">
+              <img class="social__img" src="" width="434" height="445" alt="Фото из Инстаграма">
+              <img class="social__img" src="" width="434" height="445" alt="Фото из Инстаграма">
+            </div>
+            <div class="slider__controls">
+              <button class="slider__button slider__button--left" type="button"></button>
+              <button class="slider__button slider__button--right" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__map" id="map"></div>
+        <div class="contacts__wrapper container">
+          <h2 class="contacts__title">Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <address class="contacts__address">пгт Партенит, ул. Партенитская 1</address>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__phone-link" href="tel:+79786220179">+7 978 622 01 79</a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__mail" href="mailto:podsolnuhi.restoran@yandex.ru">podsolnuhi.restoran@yandex.ru</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__schedule">без выходных: 8-30 до 23-00</p>
+            </li>
+          </ul>
+          <a class="button button--link" href="#">проложить маршрут</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="container">
+          <div class="logo">
+            <img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" width="272" height="79" alt="Логотип">
+            <p class="logo__promo">Ресторан Европейской кухни</p>
+          </div>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Меню</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Мероприятия</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Блог</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Бронирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="contacts-main">
+            <div class="contacts-main__messenger">
+              <a class="contacts-main__link" href="viber://chat?number=79786220179" target="_blank" rel="nofollow">
+                <img class="contacts-main__icon" src="img/icon/icon-viber.svg" width="24" height="24" alt="Логотип Viber">
+              </a>
+              <a class="contacts-main__link contacts-main__link--whatsapp" href="https://api.whatsapp.com/send?phone=79786220179" target="_blank" rel="nofollow">
+                <img class="contacts-main__icon" src="img/icon/icon-whatsapp.svg" width="24" height="24" alt="Логотип Whatsapp">
+              </a>
+            </div>
+            <div class="contacts-main__phone">
+              <a class="contacts-main__phone-link" href="tel:+79786220179" rel="nofollow">+7 978 622 01 79</a>
+              <p class="contacts-main__schedule">без выходных: 8-30 до 23-00</p>
+            </div>
+            <a class="contacts-main__back-call" href="#">Заказать звонок</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__wrapper-info">
+        <div class="container">
+          <div class="footer__info-block">
+            <a class="footer__info-text footer__policy" href="#" target="_blank" rel="nofollow">Политика конфиденциальности</a>
+            <p class="footer__info-text footer__copyright">Simferopol © Copyright 2021</p>
+            <div class="footer__dev">
+              <p class="footer__info-text footer__dev-text">Сделано в</p>
+              <a class="footer__dev-logo" href="#">
+                <img src="img/logo-sheer.svg" width="50" height="21" alt="Логотип веб-студии Sheer">
+                <span class="visually-hidden">Логотип веб-студии Sheer</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/slick-slider.js"></script>
+    <script src="js/maskPhone.js"></script>
+  </body>
+</html>

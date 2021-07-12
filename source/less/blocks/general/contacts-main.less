@@ -1,0 +1,129 @@
+.contacts-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  order: 2;
+  min-height: 85px;
+  .offset(0 0 0 40px; 0);
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    order: 3;
+    max-width: 210px;
+    min-height: auto;
+    padding-left: 0;
+    padding-right: 30px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
+    justify-content: normal;
+    max-width: 100%;
+    padding: 10px 0 0 0;
+    margin-left: 0;
+  }
+}
+
+.contacts-main__messenger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 52px;
+  .offset(0; 10px 16px auto 0);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
+    margin-right: 16px;
+  }
+}
+
+.contacts-main__phone {
+  .offset(0; 8px 10px auto 0);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
+    margin-right: 49px;
+  }
+}
+
+.contacts-main__icon {
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.contacts-main__phone-link {
+  font-weight: 500;
+  .typography(14px; 19px);
+  color: @white;
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: @orange;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: @desktop-width) {
+    .typography(22px; 27px);
+  }
+}
+
+.contacts-main__schedule {
+  display: none;
+  .offset(0; 0);
+  font-weight: 500;
+  .typography(11px; 13px);
+  color: @grey2;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.contacts-main__back-call {
+  display: inline-block;
+  max-width: 100%;
+  .offset(12px 28px 12px 32px; 0 0 auto auto);
+  font-weight: 700;
+  .typography(10px; 13px);
+  color: @white;
+  border: 1px solid @white;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: @white;
+    color: @black;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .typography(14px; 17px);
+  }
+}

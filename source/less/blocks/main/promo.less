@@ -1,0 +1,115 @@
+.promo {
+  .offset(40px 0 40px 0; 0);
+  background-image: url("../img/mobile-img/promo-bg.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    padding: 100px 0 95px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 1920px 998px;
+    background-position: cover;
+    background-image: url("../img/desktop-img/promo-bg.png");
+  }
+}
+
+.promo__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px 20px;
+  .offset(0; 0 auto 40px auto);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 821px;
+    row-gap: 76px;
+  }
+}
+
+.promo__description {
+  .offset(0; 0);
+
+  @media (min-width: @desktop-width) {
+    min-height: 259px;
+  }
+}
+
+.promo__subtitle {
+  display: flex;
+  flex-direction: column;
+  .offset(0; 0 0 10px 0);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.promo__subtitle-text {
+  font-family: "APCGaramondC", "Times New Roman", serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.promo__subtitle-text--first {
+  .typography(23px; 29px);
+
+  @media (min-width: @tablet-width) {
+    .typography(33px; 39px);
+    letter-spacing: 0.66em;
+  }
+}
+
+.promo__subtitle-text--second {
+  .typography(55px; 45px);
+  text-transform: lowercase;
+
+  @media (min-width: @tablet-width) {
+    .typography(100px; 60px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .typography(150px; 110px);
+  }
+}
+
+.promo__text {
+  .offset(0; 0);
+  font-weight: 500;
+  .typography(11px; 16px);
+
+  @media (min-width: @tablet-width) {
+    max-width: 385px;
+    .typography(22px; 27px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -70px 30px 0 auto;
+  }
+}
+
+.promo__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 10px;
+  .offset(0; 0);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
+}
