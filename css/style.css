@@ -247,6 +247,9 @@ a {
   margin: 0;
   background-color: rgba(9, 8, 8, 0.85);
 }
+.main-nav__sticky.header {
+  background-color: rgba(9, 8, 8, 0.93);
+}
 .header__wrapper {
   display: flex;
   flex-direction: column;
@@ -286,6 +289,11 @@ a {
   letter-spacing: 0.02em;
   color: #fe9405;
 }
+@media (max-width: 767px) {
+  .main-nav__sticky .header__address-wrapper {
+    display: none;
+  }
+}
 .main-nav {
   position: relative;
   flex-grow: 1;
@@ -324,7 +332,7 @@ a {
   position: fixed;
   top: 0;
   margin-top: 0;
-  z-index: 5;
+  z-index: 20;
   box-shadow: 0 1px 35px #68635f;
 }
 .main-nav__list {
@@ -596,6 +604,11 @@ a {
 .main-nav--opened .main-nav__link {
   opacity: 1;
   transition: 0.6s ease;
+}
+@media (max-width: 767px) {
+  .main-nav__sticky .main-nav__button-toggle {
+    top: -28px;
+  }
 }
 .footer {
   background-color: #2b2624;
@@ -874,6 +887,20 @@ a {
   .contacts-main__back-call {
     font-size: 14px;
     line-height: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .main-nav__sticky .contacts-main {
+    min-height: auto;
+  }
+  .main-nav__sticky .contacts-main__back-call {
+    margin: 0 0 auto 20px;
+  }
+  .main-nav__sticky .contacts-main__messenger {
+    margin-bottom: 0;
+  }
+  .main-nav__sticky .contacts-main__phone {
+    margin-bottom: 0;
   }
 }
 .advantages__list {
