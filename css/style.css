@@ -524,6 +524,7 @@ a {
 }
 .main-nav.main-nav--closed {
   margin: 0;
+  padding: 5px 0;
 }
 .main-nav.main-nav--opened {
   padding-top: 20px;
@@ -607,7 +608,7 @@ a {
 }
 @media (max-width: 767px) {
   .main-nav__sticky .main-nav__button-toggle {
-    top: -78px;
+    top: -28px;
   }
 }
 .footer {
@@ -894,7 +895,7 @@ a {
     min-height: auto;
   }
   .main-nav__sticky .contacts-main__back-call {
-    margin: 10px 0 auto 20px;
+    display: none;
   }
 }
 .advantages__list {
