@@ -35,11 +35,6 @@ let menuFixed = function() {
   }
 };
 
-window.onscroll = function() {
-  menuFixed();
-  /*scrollUpButton();*/
-};
-
 // Слайдер
 
 let sliderItems = document.querySelectorAll(".reviews__card");
@@ -124,3 +119,63 @@ window.addEventListener("resize", function() {
     mobileSlider();
   }
 });
+
+// Табы
+
+  let tab = function() {
+    let tabBtn = document.querySelectorAll(".tab__button");
+    let cardsBlock = document.querySelectorAll(".slick-slider");
+    let tabName;
+
+    tabBtn.forEach(element => {
+      element.addEventListener("click", selectTab)
+    });
+
+    function selectTab(evt) {
+      tabBtn.forEach(element => {
+        element.classList.remove("tab__button--active");
+      });
+      this.classList.add("tab__button--active");
+      tabName = this.getAttribute("data-tab");
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+      cardsBlock.forEach(element => {
+        if (element.classList.contains(tabName)) {
+          element.classList.add("slick-slider--active");
+        } else {
+          element.classList.remove("slick-slider--active");
+        }
+      });
+    };
+  };
+
+tab();
+
+// Кнопка наверх
+
+let scrollUpButton = function () {
+  let scrollUp = document.querySelector(".button__scroll-up");
+
+  if (window.pageYOffset > 100) {
+    scrollUp.classList.add("button__scroll-up--showed");
+  } else {
+    scrollUp.classList.remove("button__scroll-up--showed");
+  }
+
+  scrollUp.onclick = function (evt) {
+    window.scrollTo(0, 0);
+  };
+};
+
+window.onscroll = function() {
+  menuFixed();
+  scrollUpButton();
+};
+
+
+window.onscroll = function() {
+  menuFixed();
+  scrollUpButton();
+};

@@ -95,16 +95,16 @@
         <div class="container">
           <h2 class="main__subtitle">Меню ресторана «Подсолнухи»</h2>
           <div class="tab">
-            <button class="button tab__button tab__button--active" type="button">Салаты</button>
-            <button class="button tab__button" type="button">Закуски</button>
-            <button class="button tab__button" type="button">Гарниры</button>
-            <button class="button tab__button" type="button">Рыба</button>
-            <button class="button tab__button" type="button">Cупы</button>
-            <button class="button tab__button" type="button">Мясо</button>
-            <button class="button tab__button" type="button">Паста</button>
-            <button class="button tab__button" type="button">Десерты</button>
+            <button class="button tab__button tab__button--active" type="button" data-menu="salads">Салаты</button>
+            <button class="button tab__button" type="button" data-menu="snacks">Закуски</button>
+            <button class="button tab__button" type="button" data-menu="side-dishes">Гарниры</button>
+            <button class="button tab__button" type="button" data-menu="fish">Рыба</button>
+            <button class="button tab__button" type="button" data-menu="soups">Cупы</button>
+            <button class="button tab__button" type="button" data-menu="meat">Мясо</button>
+            <button class="button tab__button" type="button" data-menu="paste">Паста</button>
+            <button class="button tab__button" type="button" data-menu="deserts">Десерты</button>
           </div>
-          <div class="slick-slider slick-slider--menu">
+          <div class="slick-slider slick-slider--active slick-slider--menu salads">
             <div class="slick-slider__1">
               <div class="slider__card">
                 <article class="menu__card">
@@ -607,6 +607,9 @@
           </div>
         </div>
       </div>
+      <button class="button button__scroll-up" type="button">
+        <span class="visually-hidden">Перейти в начало страницы</span>
+      </button>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
