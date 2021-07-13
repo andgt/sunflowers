@@ -1,7 +1,25 @@
 .order {
+  position: relative;
   .offset(41px 0 60px 0; 0);
+  background-image: url("../img/desktop-img/order-bg.png");
+  background-repeat: no-repeat;
+  background-size: 1920px 829px;
+  background-position: left bottom;
 
   @media (min-width: @tablet-width) {
     padding: 81px 0 120px 0;
+  }
+
+  @media (min-width: 1920px) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -150px;
+      right: -20px;
+      width: 696px;
+      height: 640px;
+      background-image: url("../img/desktop-img/order-second-bg.png");
+      background-repeat: no-repeat;
+    }
   }
 }
