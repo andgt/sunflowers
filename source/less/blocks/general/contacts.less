@@ -90,7 +90,6 @@
     left: 0;
     width: 22px;
     height: 23px;
-    background-image: url("../img/mobile-img/contacts-icon-1.svg");
     background-repeat: no-repeat;
   }
 
@@ -101,7 +100,6 @@
       top: 15%;
       width: 32px;
       height: 33px;
-      background-image: url("../img/tablet-img/contacts-icon-1.svg");
     }
   }
 
@@ -115,6 +113,21 @@
     min-height: auto;
   }
 }
+
+.contacts__item-generate(@n) when (@n > 0) {
+  .contacts__item--@{n} {
+    &::before {
+      background-image: url("../img/mobile-img/contacts-icon-@{n}.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/tablet-img/contacts-icon-@{n}.svg");
+      }
+    }
+  }
+  .contacts__item-generate(@n - 1);
+}
+
+.contacts__item-generate(4);
 
 .contacts__text {
   .offset(0; 0);
