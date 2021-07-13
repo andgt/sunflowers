@@ -1606,8 +1606,9 @@ a {
 }
 @media (min-width: 768px) {
   .form {
+    max-width: 726px;
     padding: 39px 60px 61px 60px;
-    margin-bottom: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1400px) {
@@ -1637,11 +1638,16 @@ a {
   padding: 0;
   margin: 0 0 10px 0;
 }
+@media (min-width: 768px) {
+  .form__inner {
+    flex-grow: 1;
+  }
+}
 .form__input {
   flex-grow: 1;
   padding: 20px 20px 20px 20px;
   margin: 0;
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   border: 1px solid #68635f;
@@ -1660,12 +1666,98 @@ a {
 .form__contacts-data {
   margin-bottom: 11px;
 }
+@media (min-width: 768px) {
+  .form__contacts-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 560px;
+  }
+}
+.form__select {
+  padding: 19px 44px 19px 21px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid #68635f;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.form__select--dropdown {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 .form__order-data {
   margin-bottom: 19px;
 }
 @media (min-width: 768px) {
   .form__order-data {
-    margin-bottom: 39px;
+    max-width: 560px;
+    margin: 0 auto 39px auto;
+  }
+}
+@media (min-width: 768px) {
+  .form__order-data {
+    display: grid;
+    grid-template-columns: 180px 180px 180px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    margin: 0 0 39px 0;
+  }
+}
+.form__label-interactive {
+  position: relative;
+}
+.form__label-interactive::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 29px;
+  width: 9px;
+  height: 9px;
+  background-image: url("../img/icon/form-arrow.svg");
+  background-repeat: no-repeat;
+}
+.form__label-interactive input {
+  padding: 19px 10px 19px 21px;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid #68635f;
+  border-radius: 3px;
+}
+.form__label-interactive input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 17px;
+  color: #68635f;
+}
+.form__label-interactive input::placeholder {
+  font-size: 14px;
+  line-height: 17px;
+  color: #68635f;
+}
+@media (min-width: 768px) {
+  .form__label-interactive input {
+    max-width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  .form__order-data {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .form__order-element {
+    flex-grow: 1;
+    display: flex;
+  }
+  .form__label-interactive input {
+    flex-grow: 1;
   }
 }
 .reviews__card {
