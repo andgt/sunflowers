@@ -21,6 +21,15 @@
   }
 }
 
+.logo--footer {
+  width: 235px;
+  height: 68px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav__sticky .logo {
     display: none;
@@ -44,6 +53,11 @@
   }
 }
 
+.logo__img--footer {
+  width: 235px;
+  height: 68px;
+}
+
 .logo__promo {
   position: relative;
   top: -70px;
@@ -63,4 +77,10 @@
     left: 85px;
     .typography(11px; 13px);
   }
+}
+
+.logo__promo--footer {
+  top: -55px;
+  left: 73px;
+  .typography(10px; 12px);
 }
