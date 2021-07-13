@@ -120,6 +120,39 @@ window.addEventListener("resize", function() {
   }
 });
 
+// Табы
+
+  let tab = function() {
+    let tabBtn = document.querySelectorAll(".tab__button");
+    let cardsBlock = document.querySelectorAll(".slick-slider");
+    let tabName;
+
+    tabBtn.forEach(element => {
+      element.addEventListener("click", selectTab)
+    });
+
+    function selectTab(evt) {
+      tabBtn.forEach(element => {
+        element.classList.remove("tab__button--active");
+      });
+      this.classList.add("tab__button--active");
+      tabName = this.getAttribute("data-tab");
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+      cardsBlock.forEach(element => {
+        if (element.classList.contains(tabName)) {
+          element.classList.add("slick-slider--active");
+        } else {
+          element.classList.remove("slick-slider--active");
+        }
+      });
+    };
+  };
+
+tab();
+
 // Кнопка наверх
 
 let scrollUpButton = function () {

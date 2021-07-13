@@ -1483,6 +1483,12 @@ a {
   background-color: #fe9405;
   transition: 0.3s ease;
 }
+.slick-slider {
+  display: none;
+}
+.slick-slider--active {
+  display: block;
+}
 @media (min-width: 768px) {
   .slick-slider--menu::before {
     content: "";
