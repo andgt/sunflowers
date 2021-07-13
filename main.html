@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="img/icon/favicon.svg">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link href="air-datepicker-master/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="timepicker-master/jquery.timepicker.css" rel="stylesheet" type="text/css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=52603105-8ba9-4825-80d1-3cf5431847c9&width=100%&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="page__body">
@@ -336,17 +338,21 @@
               </div>
             </div>
             <div class="form__order-data">
-              <select>
-                <option>Кол-во человек</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+              <select class="form__select form__select--dropdown form__order-element">
+                <option class="form__select-option">Кол-во человек</option>
+                <option class="form__select-option">1</option>
+                <option class="form__select-option">2</option>
+                <option class="form__select-option">3</option>
+                <option class="form__select-option">4</option>
+                <option class="form__select-option">5</option>
+                <option class="form__select-option">6</option>
               </select>
-              <input type="date" name="date">
-              <input type="time" name="time">
+              <label class="form__label-date form__label-interactive form__order-element">
+                <input type="text" name="date" class="datepicker-here" placeholder="Дата">
+              </label>
+              <label class="form__label-time form__label-interactive form__order-element">
+                <input type="text" name="time" placeholder="Время" id="datetimepicker">
+              </label>
             </div>
             <a class="button button--link button--link-form" href="#">забронировать</a>
           </form>
@@ -610,6 +616,9 @@
     <script src="js/map.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/slick-slider.js"></script>
+    <script src="air-datepicker-master/dist/js/datepicker.min.js"></script>
+    <script src="timepicker-master/jquery.timepicker.js"></script>
+    <script src="js/timepicker.js"></script>
     <script src="js/maskPhone.js"></script>
   </body>
 </html>
