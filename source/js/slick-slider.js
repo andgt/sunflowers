@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $('.slick-slider__1').slick({
     arrows: true,
     slidesToShow: 4,
@@ -9,7 +9,7 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
+$(document).ready(function() {
   $('.slick-slider__2').slick({
     arrows: true,
     slidesToShow: 4,

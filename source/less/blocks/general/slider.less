@@ -12,6 +12,14 @@
   }
 }
 
+.slider__menu {
+  display: none;
+}
+
+.slider__menu--active {
+  display: block;
+}
+
 .slider__wrapper {
   padding-bottom: 60px;
   margin: 0 auto;
@@ -32,6 +40,20 @@
 
 .slider__card--gallery {
   position: relative;
+}
+
+.slider__card {
+  max-width: 300px;
+  .offset(0; 0 10px);
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 318px;
+    margin: 0 15px;
+  }
 }
 
 .slider__controls {

@@ -124,11 +124,11 @@ window.addEventListener("resize", function() {
 
   let tab = function() {
     let tabBtn = document.querySelectorAll(".tab__button");
-    let cardsBlock = document.querySelectorAll(".slick-slider");
+    let cardsBlock = document.querySelectorAll(".slider__menu");
     let tabName;
 
     tabBtn.forEach(element => {
-      element.addEventListener("click", selectTab)
+      element.addEventListener("click", selectTab);
     });
 
     function selectTab(evt) {
@@ -143,9 +143,9 @@ window.addEventListener("resize", function() {
     function selectTabContent(tabName) {
       cardsBlock.forEach(element => {
         if (element.classList.contains(tabName)) {
-          element.classList.add("slick-slider--active");
+          element.classList.add("slider__menu--active");
         } else {
-          element.classList.remove("slick-slider--active");
+          element.classList.remove("slider__menu--active");
         }
       });
     };
