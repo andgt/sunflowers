@@ -1448,7 +1448,7 @@ a {
   filter: unset;
   transform: unset;
   transition: 0.3s ease;
-  font-weight: 700;
+  color: #fe9405;
 }
 .tab__button:last-child {
   margin-right: 0;
@@ -1482,12 +1482,6 @@ a {
   height: 3px;
   background-color: #fe9405;
   transition: 0.3s ease;
-}
-.slick-slider {
-  display: none;
-}
-.slick-slider--active {
-  display: block;
 }
 @media (min-width: 768px) {
   .slick-slider--menu::before {
@@ -1553,22 +1547,6 @@ a {
 }
 .slick-slider__1 .slick-list {
   padding-bottom: 80px;
-}
-.slider__card {
-  max-width: 300px;
-  padding: 0;
-  margin: 0 10px;
-}
-@media (min-width: 768px) {
-  .slider__card {
-    margin: 0 15px;
-  }
-}
-@media (min-width: 1400px) {
-  .slider__card {
-    max-width: 318px;
-    margin: 0 15px;
-  }
 }
 .slick-list {
   padding: 20px;
@@ -1992,6 +1970,12 @@ a {
     max-width: 100%;
   }
 }
+.slider__menu {
+  display: none;
+}
+.slider__menu--active {
+  display: block;
+}
 .slider__wrapper {
   padding-bottom: 60px;
   margin: 0 auto;
@@ -2011,6 +1995,22 @@ a {
 }
 .slider__card--gallery {
   position: relative;
+}
+.slider__card {
+  max-width: 300px;
+  padding: 0;
+  margin: 0 10px;
+}
+@media (min-width: 768px) {
+  .slider__card {
+    margin: 0 30px 0 0;
+  }
+}
+@media (min-width: 1400px) {
+  .slider__card {
+    max-width: 318px;
+    margin: 0 15px;
+  }
 }
 .slider__controls {
   position: relative;
