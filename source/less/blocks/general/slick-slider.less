@@ -90,7 +90,11 @@
 
 .slick-slider__2 .slick-prev,
 .slick-slider__2 .slick-next {
-  top: 330px;
+  top: 300px;
+
+  @media (min-width: @desktop-width) {
+    top: 530px;
+  }
 }
 
 .slick-prev:hover,
@@ -154,6 +158,14 @@
 @media (min-width: @desktop-width) {
   .slick-prev {
     left: 45%;
+  }
+
+  .slick-slider__2 .slick-prev {
+    left: 0;
+  }
+
+  .slick-slider__2 .slick-next {
+    left: 74px;
   }
 }
 
