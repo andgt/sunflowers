@@ -120,10 +120,10 @@ window.addEventListener("resize", function() {
   }
 });
 
-// Табы
+// Табы меню
 
-  let tab = function() {
-    let tabBtn = document.querySelectorAll(".tab__button");
+  let tabMenu = function() {
+    let tabBtn = document.querySelectorAll(".tab__button--menu");
     let cardsBlock = document.querySelectorAll(".slider__menu");
     let tabName;
 
@@ -151,7 +151,40 @@ window.addEventListener("resize", function() {
     };
   };
 
-tab();
+tabMenu();
+
+// Табы галерея
+
+  let tabGallery = function() {
+    let tabBtnGallery = document.querySelectorAll(".tab__button--gallery");
+    let cardsBlockGallery = document.querySelectorAll(".gallery__block");
+    let tabNameGallery;
+
+    tabBtnGallery.forEach(element => {
+      element.addEventListener("click", selectTab);
+    });
+
+    function selectTab(evt) {
+      tabBtnGallery.forEach(element => {
+        element.classList.remove("tab__button--gallery-active");
+      });
+      this.classList.add("tab__button--gallery-active");
+      tabNameGallery = this.getAttribute("data-tab");
+      selectTabContent(tabNameGallery);
+    }
+
+    function selectTabContent(tabNameGallery) {
+      cardsBlockGallery.forEach(element => {
+        if (element.classList.contains(tabNameGallery)) {
+          element.classList.add("gallery__block--active");
+        } else {
+          element.classList.remove("gallery__block--active");
+        }
+      });
+    };
+  };
+
+tabGallery();
 
 // Кнопка наверх
 
