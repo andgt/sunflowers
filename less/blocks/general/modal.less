@@ -20,7 +20,7 @@
 .modal {
   display: none;
   position: absolute;
-  top: 300px;
+  top: 100px;
   right: 0;
   left: 0;
   bottom: auto;
@@ -47,6 +47,10 @@
     max-width: 434px;
     padding: 30px 72px 59px 66px;
     margin: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 300px;
   }
 }
 

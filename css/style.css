@@ -2246,7 +2246,7 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
 .modal {
   display: none;
   position: absolute;
-  top: 300px;
+  top: 100px;
   right: 0;
   left: 0;
   bottom: auto;
@@ -2255,7 +2255,6 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   padding: 20px 22px 39px 26px;
   color: #000000;
   background-color: #ffffff;
-  /*box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);*/
   border-radius: 3px;
 }
 .modal::before {
@@ -2274,6 +2273,11 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
     max-width: 434px;
     padding: 30px 72px 59px 66px;
     margin: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .modal {
+    top: 300px;
   }
 }
 .modal__show {
