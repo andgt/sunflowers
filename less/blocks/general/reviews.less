@@ -14,6 +14,18 @@
     background-repeat: no-repeat;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 30%;
+    width: 134px;
+    height: 35px;
+    background: rgba(104, 99, 95, 0.7);
+    filter: blur(40px);
+    z-index: -1;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 21px 0 21px;
 
