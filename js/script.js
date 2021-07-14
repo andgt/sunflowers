@@ -42,13 +42,12 @@ let btnLeft = document.querySelector(".slider__toggle--left");
 let btnRight = document.querySelector(".slider__toggle--right");
 let sliderList = document.querySelector(".slider__list");
 let offset = 0;
-let offsetPlus = 0;
 
 function slider() {
   let sliderWidthDesktop;
   let sliderItemMax;
   for (let sliderItem of sliderItems) {
-    sliderWidthDesktop = sliderItem.offsetWidth + parseInt(getComputedStyle(sliderItem).marginRight);
+    sliderWidthDesktop = sliderItem.offsetWidth + parseInt(getComputedStyle(sliderItem).marginRight) + parseInt(getComputedStyle(sliderItem).marginLeft);
     sliderItemMax = sliderWidthDesktop * (sliderItems.length-3);
   }
 
@@ -66,7 +65,7 @@ function slider() {
     offset = offset - sliderWidthDesktop;
 
     if (offset < 0) {
-      offset = 0;
+      offset = sliderItemMax;
     }
 
     sliderList.style.left = -offset + "px";
@@ -95,7 +94,7 @@ function mobileSlider() {
     offset = offset - sliderWidth;
 
     if (offset < 0) {
-      offset = 0;
+      offset = sliderItemMaxMobile;
     }
 
     sliderList.style.left = -offset + "px";
