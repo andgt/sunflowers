@@ -31,7 +31,7 @@ let menuFixed = function() {
       promo.classList.add("header__logo-sticky");
     } else {
       promo.classList.remove("main-nav__sticky");
-    };
+    }
   }
 };
 
@@ -147,7 +147,7 @@ window.addEventListener("resize", function() {
           element.classList.remove("slider__menu--active");
         }
       });
-    };
+    }
   };
 
 tabMenu();
@@ -180,7 +180,7 @@ tabMenu();
           element.classList.remove("gallery__block--active");
         }
       });
-    };
+    }
   };
 
 tabGallery();
