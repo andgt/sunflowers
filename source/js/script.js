@@ -25,14 +25,6 @@ let menuFixed = function() {
   } else {
     promo.classList.remove("main-nav__sticky");
   }
-
-  if (window.innerWidth < 768) {
-    if (window.pageYOffset > 10) {
-      promo.classList.add("header__logo-sticky");
-    } else {
-      promo.classList.remove("main-nav__sticky");
-    }
-  }
 };
 
 // Слайдер

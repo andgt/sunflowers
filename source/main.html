@@ -15,7 +15,10 @@
     <header class="header">
       <div class="container header__wrapper">
         <div class="logo">
-          <img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" width="272" height="79" alt="Логотип">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo.png">
+            <img class="logo__img" src="img/icon/icon-logo-mobile.svg" width="60" height="60" alt="Логотип">
+          </picture>
           <p class="logo__promo">Ресторан Европейской кухни</p>
         </div>
         <nav class="main-nav main-nav--closed">
@@ -57,7 +60,10 @@
             </a>
           </div>
           <div class="contacts-main__phone">
-            <a class="contacts-main__phone-link" href="tel:+79786220179" rel="nofollow">+7 978 622 01 79</a>
+            <a class="contacts-main__phone-link" href="tel:+79786220179" rel="nofollow">
+              <img class="contacts-main__phone-icon" src="img/icon/icon-phone.svg" width="24" height="24" alt="Набор номера">
+              <span class="contacts-main__phone-number">+7 978 622 01 79</span>
+            </a>
             <p class="contacts-main__schedule">без выходных: 8-30 до 23-00</p>
           </div>
           <a class="contacts-main__back-call js-button-open" href="#" data-modal-window="js-back-call" data-modal-name="Заказать звонок">Заказать звонок</a>
@@ -81,7 +87,7 @@
               <a class="button button--promo button--link" href="#">заказать столик</a>
             </div>
           </div>
-          <div class="advantages">
+          <div class="advantages promo__advantages">
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--1">Вместительный зал на 48 гостей</li>
               <li class="advantages__item advantages__item--2">Каждый вечер живая музыка</li>
@@ -1177,40 +1183,42 @@
             </div>
           </div>
           <h2 class="main__subtitle">Скачайте полное меню ресторана «Подсолнухи»</h2>
-          <ul class="menu__advantages-list">
-            <li class="menu__advantages-item">
-              <div class="menu__advantages-card">
-                <div class="menu__advantages-inner">
-                  <img class="menu__advantages-img" src="img/menu-advantages-1.png" width="158" height="163" alt="Разделы меню">
+          <div class="slick-slider">
+            <div class="menu__advantages-list slick-slider__3">
+              <div class="menu__advantages-item">
+                <div class="menu__advantages-card">
+                  <div class="menu__advantages-inner">
+                    <img class="menu__advantages-img" src="img/menu-advantages-1.png" width="158" height="163" alt="Разделы меню">
+                  </div>
+                  <h3 class="menu__advantages-title">Актуальные цены</h3>
                 </div>
-                <h3 class="menu__advantages-title">Актуальные цены</h3>
               </div>
-            </li>
-            <li class="menu__advantages-item">
-              <div class="menu__advantages-card">
-                <div class="menu__advantages-inner">
-                  <img class="menu__advantages-img" src="img/menu-advantages-2.png" width="158" height="163" alt="Разделы меню">
+              <div class="menu__advantages-item">
+                <div class="menu__advantages-card">
+                  <div class="menu__advantages-inner">
+                    <img class="menu__advantages-img" src="img/menu-advantages-2.png" width="158" height="163" alt="Разделы меню">
+                  </div>
+                  <h3 class="menu__advantages-title">Винная карта</h3>
                 </div>
-                <h3 class="menu__advantages-title">Винная карта</h3>
               </div>
-            </li>
-            <li class="menu__advantages-item">
-              <div class="menu__advantages-card">
-                <div class="menu__advantages-inner">
-                  <img class="menu__advantages-img" src="img/menu-advantages-3.png" width="158" height="163" alt="Разделы меню">
+              <div class="menu__advantages-item">
+                <div class="menu__advantages-card">
+                  <div class="menu__advantages-inner">
+                    <img class="menu__advantages-img" src="img/menu-advantages-3.png" width="158" height="163" alt="Разделы меню">
+                  </div>
+                  <h3 class="menu__advantages-title">Сезонное меню</h3>
                 </div>
-                <h3 class="menu__advantages-title">Сезонное меню</h3>
               </div>
-            </li>
-            <li class="menu__advantages-item">
-              <div class="menu__advantages-card">
-                <div class="menu__advantages-inner">
-                  <img class="menu__advantages-img" src="img/menu-advantages-4.png" width="158" height="163" alt="Разделы меню">
+              <div class="menu__advantages-item">
+                <div class="menu__advantages-card">
+                  <div class="menu__advantages-inner">
+                    <img class="menu__advantages-img" src="img/menu-advantages-4.png" width="158" height="163" alt="Разделы меню">
+                  </div>
+                  <h3 class="menu__advantages-title">Завтраки</h3>
                 </div>
-                <h3 class="menu__advantages-title">Завтраки</h3>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
           <a class="button button--link button--link-menu" href="#">скачать меню</a>
         </div>
       </section>
@@ -1425,7 +1433,11 @@
                 <input type="text" name="time" placeholder="Время" id="datetimepicker">
               </label>
             </div>
-            <a class="button button--link button--link-form" href="#">забронировать</a>
+            <div class="form__item form__item--submit">
+            <div class="btn__wrap btn__wrap--grad">
+              <input class="wpcf7-form-control wpcf7-submit xbtn xbtn--grad button form__modal-submit form__modal-order" type="submit" value="Забронировать">
+            </div>
+          </div>
           </form>
         </div>
       </section>
@@ -1445,14 +1457,26 @@
           </div>
           <ul class="events__list">
             <li class="events__item events__item--1">
+              <picture>
+                <source media="(min-width: 1400px)" srcset="img/desktop-img/events-list-img-1.png">
+                <img class="events__item-img" src="img/mobile-img/events-list-img-1.png" width="60" height="60" alt="Картинка события">
+              </picture>
               <h3 class="events__item-title">Дни рождения</h3>
               <p class="events__item-text">Украсим ресторан шарами и гирляндами, пригласим ведущих, приготовим <strong>праздничное меню</strong> для маленьких гостей.</p>
             </li>
             <li class="events__item events__item--2">
+              <picture>
+                <source media="(min-width: 1400px)" srcset="img/desktop-img/events-list-img-2.png">
+                <img class="events__item-img" src="img/mobile-img/events-list-img-2.png" width="60" height="60" alt="Картинка события">
+              </picture>
               <h3 class="events__item-title">Свадьбы</h3>
               <p class="events__item-text">Ресторан <strong>вмещает до 48 гостей.</strong> На террасе получаются великолепные выездные регистрации и летние вечеринки.</p>
             </li>
             <li class="events__item events__item--3">
+              <picture>
+                <source media="(min-width: 1400px)" srcset="img/desktop-img/events-list-img-3.png">
+                <img class="events__item-img" src="img/mobile-img/events-list-img-3.png" width="60" height="60" alt="Картинка события">
+              </picture>
               <h3 class="events__item-title">Банкеты</h3>
               <p class="events__item-text">Не обязательно арендовывать весь ресторан! У нас есть две отдельные зоны для <strong>компаний 16-24 человека.</strong></p>
             </li>
@@ -1510,12 +1534,28 @@
           <div class="social__network">
             <h2 class="main__subtitle main__subtitle--social">Instagram</h2>
             <p class="main__promo main__promo--social">Наши фотоистории в социальных сетях</p>
-            <div class="social__img-slider">
-              <div class="social__img-list">
-                <img class="social__img" src="img/social-img-1.jpg" width="318" height="340" alt="Фото из Инстаграма">
-                <img class="social__img" src="img/social-img-2.jpg" width="318" height="340" alt="Фото из Инстаграма">
-                <img class="social__img" src="img/social-img-3.jpg" width="318" height="340" alt="Фото из Инстаграма">
-                <img class="social__img" src="img/social-img-4.jpg" width="318" height="340" alt="Фото из Инстаграма">
+            <div class="slick-slider">
+              <div class="social__img-list slick-slider__4">
+                <div>
+                  <div class="social__img-wrapper">
+                    <img class="social__img" src="img/social-img-1.jpg" width="318" height="340" alt="Фото из Инстаграма">
+                  </div>
+                </div>
+                <div>
+                  <div class="social__img-wrapper">
+                    <img class="social__img" src="img/social-img-2.jpg" width="318" height="340" alt="Фото из Инстаграма">
+                  </div>
+                </div>
+                <div>
+                  <div class="social__img-wrapper">
+                    <img class="social__img" src="img/social-img-3.jpg" width="318" height="340" alt="Фото из Инстаграма">
+                  </div>
+                </div>
+                <div>
+                  <div class="social__img-wrapper">
+                    <img class="social__img" src="img/social-img-4.jpg" width="318" height="340" alt="Фото из Инстаграма">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1525,68 +1565,88 @@
               <div class="slider__wrapper">
                 <div class="slider__list">
                   <article class="reviews__card reviews__card--1">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/tablet-img/reviews-img-1.png">
+                      <img class="reviews__card-img" src="img/mobile-img/reviews-img-1.png" width="60" height="60" alt="Фото оставившего отзыв">
+                    </picture>
                     <div class="reviews__inner">
-                    <div class="reviews__title_container">
-                      <h3 class="reviews__title">Мария Абалихина</h3>
-                    </div>
-                    <div class="reviews__text-container">
-                      <p class="reviews__text">
-                        Уютно, красивый интерьер, приветливый  официант, живая музыка и, самое главное- ну очень вкусная еда! Шашлык просто таял во рту, медовик нежнейший и все остальное также на высоте. Обязательно вернёмся ещё!
-                      </p>
-                    </div>
-                    <a class="reviews__link" href="#">Смотреть оригинал</a>
+                      <div class="reviews__title_container">
+                        <h3 class="reviews__title">Мария Абалихина</h3>
+                      </div>
+                      <div class="reviews__text-container">
+                        <p class="reviews__text">
+                          Уютно, красивый интерьер, приветливый  официант, живая музыка и, самое главное- ну очень вкусная еда! Шашлык просто таял во рту, медовик нежнейший и все остальное также на высоте. Обязательно вернёмся ещё!
+                        </p>
+                      </div>
+                      <a class="reviews__link" href="#">Смотреть оригинал</a>
                     </div>
                   </article>
                   <article class="reviews__card reviews__card--2">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/tablet-img/reviews-img-2.png">
+                      <img class="reviews__card-img" src="img/mobile-img/reviews-img-2.png" width="60" height="60" alt="Фото оставившего отзыв">
+                    </picture>
                     <div class="reviews__inner">
-                    <div class="reviews__title_container">
-                      <h3 class="reviews__title">Dmitry Pchelkin</h3>
+                      <div class="reviews__title_container">
+                        <h3 class="reviews__title">Dmitry Pchelkin</h3>
+                      </div>
+                      <div class="reviews__text-container">
+                        <p class="reviews__text">
+                          Лучший ресторан в Партените! Отдельное спасибо персоналу, относящемуся к своему заведению с большой любовью. Кухня домашняя, очень приятная. Цены соответствуют качеству. Большое спасибо!
+                        </p>
+                      </div>
+                      <a class="reviews__link" href="#">Смотреть оригинал</a>
                     </div>
-                    <div class="reviews__text-container">
-                      <p class="reviews__text">
-                        Лучший ресторан в Партените! Отдельное спасибо персоналу, относящемуся к своему заведению с большой любовью. Кухня домашняя, очень приятная. Цены соответствуют качеству. Большое спасибо!
-                      </p>
+                  </article>
+                  <article class="reviews__card reviews__card--3">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/tablet-img/reviews-img-3.png">
+                      <img class="reviews__card-img" src="img/mobile-img/reviews-img-3.png" width="60" height="60" alt="Фото оставившего отзыв">
+                    </picture>
+                    <div class="reviews__inner">
+                      <div class="reviews__title_container">
+                        <h3 class="reviews__title">Валерий Цвирин</h3>
+                      </div>
+                      <div class="reviews__text-container">
+                        <p class="reviews__text">
+                          Уютная, почти домашняя, обстановка, отличная кухня, доброжелательный персонал, и после 19.00 звучит живая музыка. После проведенного «рестайлинга» кафе приобрело более современный вид и стало еще уютней...
+                        </p>
+                      </div>
+                      <a class="reviews__link" href="#">Смотреть оригинал</a>
                     </div>
-                    <a class="reviews__link" href="#">Смотреть оригинал</a>
+                  </article>
+                  <article class="reviews__card reviews__card--3">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/tablet-img/reviews-img-3.png">
+                      <img class="reviews__card-img" src="img/mobile-img/reviews-img-3.png" width="60" height="60" alt="Фото оставившего отзыв">
+                    </picture>
+                    <div class="reviews__inner">
+                      <div class="reviews__title_container">
+                        <h3 class="reviews__title">Геннадий Иванов</h3>
+                      </div>
+                      <div class="reviews__text-container">
+                        <p class="reviews__text">
+                          Уютная, почти домашняя, обстановка, отличная кухня, доброжелательный персонал, и после 19.00 звучит живая музыка. После проведенного «рестайлинга» кафе приобрело более современный вид и стало еще уютней...
+                        </p>
+                      </div>
+                      <a class="reviews__link" href="#">Смотреть оригинал</a>
                     </div>
                   </article>
                   <article class="reviews__card reviews__card--3">
                     <div class="reviews__inner">
-                    <div class="reviews__title_container">
-                      <h3 class="reviews__title">Валерий Цвирин</h3>
-                    </div>
-                    <div class="reviews__text-container">
-                      <p class="reviews__text">
-                        Уютная, почти домашняя, обстановка, отличная кухня, доброжелательный персонал, и после 19.00 звучит живая музыка. После проведенного «рестайлинга» кафе приобрело более современный вид и стало еще уютней...
-                      </p>
-                    </div>
-                    <a class="reviews__link" href="#">Смотреть оригинал</a>
-                    </div>
-                  </article>
-                  <article class="reviews__card reviews__card--3">
-                    <div class="reviews__inner">
-                    <div class="reviews__title_container">
-                      <h3 class="reviews__title">Геннадий Иванов</h3>
-                    </div>
-                    <div class="reviews__text-container">
-                      <p class="reviews__text">
-                        Уютная, почти домашняя, обстановка, отличная кухня, доброжелательный персонал, и после 19.00 звучит живая музыка. После проведенного «рестайлинга» кафе приобрело более современный вид и стало еще уютней...
-                      </p>
-                    </div>
-                    <a class="reviews__link" href="#">Смотреть оригинал</a>
-                    </div>
-                  </article>
-                  <article class="reviews__card reviews__card--3">
-                    <div class="reviews__inner">
-                    <div class="reviews__title_container">
-                      <h3 class="reviews__title">Виктор Петров</h3>
-                    </div>
-                    <div class="reviews__text-container">
-                      <p class="reviews__text">
-                        Уютная, почти домашняя, обстановка, отличная кухня, доброжелательный персонал, и после 19.00 звучит живая музыка. После проведенного «рестайлинга» кафе приобрело более современный вид и стало еще уютней...
-                      </p>
-                    </div>
-                    <a class="reviews__link" href="#">Смотреть оригинал</a>
+                      <picture>
+                      <source media="(min-width: 768px)" srcset="img/tablet-img/reviews-img-3.png">
+                        <img class="reviews__card-img" src="img/mobile-img/reviews-img-3.png" width="60" height="60" alt="Фото оставившего отзыв">
+                      </picture>
+                      <div class="reviews__title_container">
+                        <h3 class="reviews__title">Виктор Петров</h3>
+                      </div>
+                      <div class="reviews__text-container">
+                        <p class="reviews__text">
+                          Уютная, почти домашняя, обстановка, отличная кухня, доброжелательный персонал, и после 19.00 звучит живая музыка. После проведенного «рестайлинга» кафе приобрело более современный вид и стало еще уютней...
+                        </p>
+                      </div>
+                      <a class="reviews__link" href="#">Смотреть оригинал</a>
                     </div>
                   </article>
                 </div>

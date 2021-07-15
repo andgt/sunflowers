@@ -1,12 +1,16 @@
 .gallery {
   .offset(41px 0 60px 0; 0);
-  background-image: url("../img/desktop-img/gallery-bg.png");
+  background-image: url("../img/desktop-img/gallery-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left bottom;
+  background-position: left top;
 
   @media (min-width: @tablet-width) {
     padding: 81px 0 120px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 1920px 985px;
   }
 }
 
