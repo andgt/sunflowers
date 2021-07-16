@@ -2054,6 +2054,8 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   width: 60px;
   height: 60px;
   border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .reviews__card-img {
@@ -2445,13 +2447,16 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   }
 }
 .social__img {
+  display: block;
   width: 278px;
+  height: 297px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .social__img {
     width: 318px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 340px;
   }
 }
 .promo {
