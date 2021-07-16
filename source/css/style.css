@@ -2457,7 +2457,7 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
 .promo {
   padding: 40px 0 40px 0;
   margin: 0;
-  background-image: url("../img/mobile-img/promo-bg.png");
+  background-image: url("../img/mobile-img/promo-bg.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -2471,9 +2471,14 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   .promo {
     height: 100vh;
     min-height: 885px;
-    background-size: 1920px 998px;
+    background-size: 1920px 981px;
     background-position: 0 -98px;
-    background-image: url("../img/desktop-img/promo-bg.png");
+    background-image: url("../img/desktop-img/promo-bg.jpg");
+  }
+}
+@media (min-width: 1400px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1400px) and (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../img/desktop-img/promo-bg@2x.jpg");
   }
 }
 .promo__inner {

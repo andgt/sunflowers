@@ -1,6 +1,6 @@
 .promo {
   .offset(40px 0 40px 0; 0);
-  background-image: url("../img/mobile-img/promo-bg.png");
+  background-image: url("../img/mobile-img/promo-bg.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -12,9 +12,13 @@
   @media (min-width: @desktop-width) {
     height: 100vh;
     min-height: 885px;
-    background-size: 1920px 998px;
+    background-size: 1920px 981px;
     background-position: 0 -98px;
-    background-image: url("../img/desktop-img/promo-bg.png");
+    background-image: url("../img/desktop-img/promo-bg.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/desktop-img/promo-bg@2x.jpg");
+    }
   }
 }
 
