@@ -2053,6 +2053,7 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   left: -10px;
   width: 60px;
   height: 60px;
+  border-radius: 50px;
 }
 @media (min-width: 768px) {
   .reviews__card-img {
