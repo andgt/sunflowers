@@ -76,7 +76,26 @@
   @media (min-width: @tablet-width) {
     align-items: flex-start;
     max-width: 100%;
-    min-height: 80px;
+    min-height: 75px;
+    padding-left: 75px;
+    margin: 0;
+    .typography(16px; 22px);
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &::before {
+      top: -15px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    align-items: flex-start;
+    max-width: 100%;
+    min-height: 95px;
     padding-left: 95px;
     margin: 0;
     .typography(16px; 22px);
@@ -92,7 +111,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: 1600px) {
     padding-right: 50px;
   }
 }

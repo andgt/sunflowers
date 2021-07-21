@@ -39,12 +39,20 @@
 }
 
 .slider__card-inner {
-  display: flex;
+  display: none;
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 318px 318px 666px;
     gap: 30px;
+  }
+}
+
+.slider__card-wrapper {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
