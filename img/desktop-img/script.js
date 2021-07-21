@@ -28,7 +28,7 @@ let menuFixed = function() {
 };
 
 // Слайдер
-
+/*
 let sliderItems = document.querySelectorAll(".reviews__card");
 let btnLeft = document.querySelector(".slider__toggle--left");
 let btnRight = document.querySelector(".slider__toggle--right");
@@ -91,8 +91,8 @@ function mobileSlider() {
 
     sliderList.style.left = -offset + "px";
   };
-}
-
+} */
+/*
 if (window.innerWidth < 1400) {
   window.onload = mobileSlider();
 } else {
@@ -109,7 +109,7 @@ window.addEventListener("resize", function() {
   if (window.innerWidth < 1400) {
     mobileSlider();
   }
-});
+}); */
 
 // Табы меню
 
@@ -293,3 +293,17 @@ let modal = function () {
 };
 
 modal();
+
+//Попап менеджер FancyBox
+	//Документация: http://fancybox.net/howto
+	//<a class="fancybox"><img src="image.jpg" /></a>
+	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
+	jQuery(".fancybox").fancybox();
+
+  // Плавный скролл
+  jQuery("a.link-page").on("click", function (event) {
+	event.preventDefault(); //опустошим стандартную обработку
+	let id  = jQuery(this).attr('href'), //заберем айдишник блока с параметром URL
+		top = jQuery(id).offset().top; //определим высоту от начала страницы до якоря
+    jQuery('body,html').animate({scrollTop: top - 60}, 1000); //сделаем прокрутку за 1 с
+}); 

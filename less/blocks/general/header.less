@@ -1,7 +1,16 @@
 .header {
-  .offset(14px 0 6px 0; 0);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 14px 0 6px 0;
+  margin: 0;
   background-color: @black2;
   transition: 0.5s ease;
+  z-index: 3000;
+}
+
+.header__fixed {
+  background-color: @black4;
 }
 
 .main-nav__sticky.header {
