@@ -98,8 +98,8 @@ a {
 .page__body {
   position: relative;
   display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: 1fr -webkit-min-content;
+  grid-template-rows: 1fr min-content;
   align-content: start;
   max-width: 1920px;
   min-height: 100%;
@@ -119,6 +119,9 @@ a {
   right: 0;
   left: 0;
   overflow: hidden;
+}
+.main--index {
+  padding-top: 100px;
 }
 .main__subtitle {
   padding: 0;
